@@ -7,31 +7,46 @@
         "lint": "eslint src --ext .js",
         "lint:fix": "eslint src --ext .js --fix",
         "preview": "vite preview",
-        "prepare": "husky install"
+        "prepare": "husky install",
+        "test": "vite --config vite.config.test.js",
+        "storybook": "start-storybook -p 6006",
+        "build-storybook": "build-storybook"
     },
     "dependencies": {
         "react": "^17.0.2",
         "react-dom": "^17.0.2"
     },
     "devDependencies": {
+        "@babel/core": "^7.16.7",
+        "@storybook/addon-actions": "^6.4.9",
+        "@storybook/addon-essentials": "^6.4.9",
+        "@storybook/addon-links": "^6.4.9",
+        "@storybook/react": "^6.4.9",
         "@vitejs/plugin-react": "^1.0.7",
+        "babel-loader": "^8.2.3",
+        "enzyme": "^3.11.0",
+        "enzyme-adapter-react-16": "^1.15.6",
         "eslint": "^8.6.0",
         "eslint-config-airbnb": "^19.0.4",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-jest": "^25.3.4",
         "eslint-plugin-jsx-a11y": "^6.5.1",
         "eslint-plugin-prettier": "^4.0.0",
         "eslint-plugin-react": "^7.28.0",
         "eslint-plugin-react-hooks": "^4.3.0",
+        "eslint-plugin-storybook": "^0.5.5",
         "husky": ">=6",
         "lint-staged": ">=10",
         "prettier": "^2.5.1",
+        "puppeteer": "^13.0.1",
         "sass": "^1.47.0",
         "vite": "^2.7.2",
-        "vite-plugin-linter": "^1.0.2"
+        "vite-plugin-linter": "^1.0.2",
+        "vite-plugin-test": "^0.0.5"
     },
     "lint-staged": {
-        "*.{js,css,md,vue,json,ts,tsx,jsx}": "prettier --write",
+        "*.{js,jsx,css,md,vue,json,ts,tsx,jsx}": "prettier --write",
         "*.jsx": "eslint --cache --fix"
     }
 }
