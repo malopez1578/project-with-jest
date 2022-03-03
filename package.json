@@ -1,6 +1,6 @@
 {
     "name": "project-jest",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "scripts": {
         "dev": "vite --host",
         "build": "vite build",
@@ -10,7 +10,7 @@
         "prepare": "husky install",
         "test": "vite --config vite.config.test.js",
         "storybook": "start-storybook -p 6006",
-        "release:patch": "npx standard-version",
+        "release:patch": "npx standard-version && git push --follow-tags",
         "build-storybook": "build-storybook"
     },
     "dependencies": {
